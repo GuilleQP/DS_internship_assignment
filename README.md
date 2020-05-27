@@ -11,7 +11,8 @@
 - Retrieve data from https://www.ycombinator.com/companies/
 
 ## Requirements
-
+xlrd
+pandas
 
 ## Instructions
 
