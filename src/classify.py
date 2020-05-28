@@ -8,7 +8,7 @@ import pandas as pd
 import json
 import re
 
-debug = True
+debug = False
 
 class Classifier:
     
