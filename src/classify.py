@@ -7,8 +7,17 @@ debug = True
 class Classifier:
     
     def __init__(self, file_path, sheet_id=1):
-        '''Initialize the classifier
+        '''
+        Initialize the classifier.
 
+        Reads an excel file containing data and the
+        json file with the desired configuration
+        for the classification.
+
+        Parameters:
+        file_path (str): path to excel data file.
+        sheet_id (int): Optional paramenter indicating the
+            sheet containing the data, default=1.
         '''
         try:
             self.df = pd.read_excel(file_path, sheet_id)
@@ -25,8 +34,16 @@ class Classifier:
             print(self.df.head())
 
     def classify(self):
-        '''Classify the data into Startups, Mature companies, Universities/Schools, Government/Non-profit or Unclassified.
+        '''
+        Classify the data into Startups, Mature companies, Universities/Schools, 
+        Government/Non-profit or Unclassified.
 
+        This method iterates over all the data instances and classifies them 
+        into 5 categories according to the settings specified in the json
+        config file. It looks how many keywords there are for each entity and
+        the class with highest occurences gets selected as the type. This classification 
+        is fairly simple but robust and easy customizable.
+        The data is then exported into an output dir under the name 'classified data'.
         '''
         # Iterate over all instances in the dataframe
         for index, row in self.df.iterrows():
@@ -58,9 +75,20 @@ class Classifier:
             
 
     def __intersection(self, lst1, lst2):
+        '''
+        Returns the intersection of two lists.
+
+        Parameters:
+        lst1 (list): Not empty list 1
+        lst2 (list): Not empty list 2
+
+        Returns:
+        list with the values appearing in both input lists.
+        '''
         return [value for value in lst1 if value in lst2]
 
 if __name__ == "__main__":
     # Initialize classifier instance
     c = Classifier('../data/Data_Science_Internship_Assignment.xlsx')
+    # Classify the data
     c.classify()
