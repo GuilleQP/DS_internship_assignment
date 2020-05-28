@@ -1,3 +1,9 @@
+'''
+Startups classifier
+
+@author: Guillermo Quintana Pelayo
+@date: 28-05-2020
+'''
 import pandas as pd
 import json
 import re

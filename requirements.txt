@@ -3,3 +3,5 @@ pandas
 re
 json
 openpyxl
+beautifulsoup4
+requests
