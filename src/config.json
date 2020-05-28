@@ -1,0 +1,24 @@
+{
+    "startup":{
+        "tag": "Startup",
+        "keywords":["tech","technology","innovation","innovative","software","system","develop",
+            "development","web","website","research","data","cloud","hardware","database","e-commerce",
+            "online","mobile","3d","game","gaming","blog","isp","subscription","social media"],
+        "post_year": 1990,
+        "pre_year": null
+    },
+    "company":{
+        "tag": "Mature Company",
+        "keywords": [],
+        "post_year": null,
+        "pre_year": 1990
+    },
+    "university":{
+        "tag": "University/School",
+        "keywords": ["school","education","university","institute"]
+    },
+    "gov":{
+        "tag": "Government/Non-profit",
+        "keywords": ["not-for-profit",".gov","government","non-profit",".org"]
+    }
+}

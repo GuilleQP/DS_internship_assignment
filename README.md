@@ -13,6 +13,9 @@
 ## Requirements
 xlrd
 pandas
+re
+json
+openpyxl
 
 ## Instructions
 
